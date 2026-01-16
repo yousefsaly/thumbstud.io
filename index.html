@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thumb Studio | Strategy Consulting for Startups</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--cream:#FAF8F5;--ink:#1a1a1a;--ink-light:#4a4a4a;--accent:#E07A5F}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+    h1,h2,h3{font-family:'Fraunces',serif;font-weight:400}
+    nav{position:fixed;top:0;width:100%;padding:1.25rem 2rem;display:flex;justify-content:space-between;background:rgba(250,248,245,0.9);backdrop-filter:blur(12px);z-index:100}
+    .logo{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:600;color:var(--ink);text-decoration:none}
+    .nav-links{display:flex;gap:2rem}
+    .nav-links a{text-decoration:none;color:var(--ink-light);font-size:0.9rem;font-weight:500}
+    .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:8rem 2rem 4rem;max-width:1400px;margin:0 auto}
+    .hero-content{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+    .hero-text h1{font-size:clamp(2.5rem,5vw,3.5rem);margin-bottom:1.5rem}
+    .hero-text h1 em{font-style:italic;color:var(--accent)}
+    .hero-text p{font-size:1.15rem;color:var(--ink-light);margin-bottom:2rem;max-width:500px}
+    .cta-btn{display:inline-block;padding:1rem 2rem;background:var(--ink);color:var(--cream);text-decoration:none;font-weight:500;border-radius:100px}
+    .hero-image img{width:100%;max-width:520px;border-radius:24px;box-shadow:0 40px 80px rgba(0,0,0,0.08)}
+    .credentials{padding:3rem 2rem;border-top:1px solid rgba(0,0,0,0.06);border-bottom:1px solid rgba(0,0,0,0.06)}
+    .credentials-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:center;gap:3rem;flex-wrap:wrap}
+    .credential{text-align:center;color:#8a8a8a;font-size:0.85rem;font-weight:500}
+    .credential span{display:block;font-family:'Fraunces',serif;font-size:1rem;color:var(--ink-light);margin-top:0.25rem}
+    .services{padding:8rem 2rem;max-width:1200px;margin:0 auto}
+    .section-header{text-align:center;margin-bottom:4rem}
+    .section-label{font-size:0.75rem;text-transform:uppercase;letter-spacing:0.15em;color:var(--accent);margin-bottom:1rem;font-weight:600}
+    .section-header h2{font-size:clamp(2rem,4vw,2.75rem);max-width:600px;margin:0 auto}
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+    .service-card{background:white;padding:2.5rem;border-radius:20px;border:1px solid rgba(0,0,0,0.04)}
+    .service-icon{font-size:2rem;margin-bottom:1.25rem}
+    .service-card h3{font-size:1.25rem;margin-bottom:0.75rem;font-weight:600}
+    .service-card p{color:var(--ink-light);font-size:0.95rem}
+    .philosophy{padding:8rem 2rem;background:var(--ink);color:var(--cream)}
+    .philosophy-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+    .philosophy-image img{width:100%;max-width:480px;border-radius:20px}
+    .philosophy-content .section-label{color:var(--accent)}
+    .philosophy-content h2{font-size:clamp(2rem,4vw,2.5rem);margin-bottom:1.5rem;color:var(--cream)}
+    .philosophy-content p{color:rgba(250,248,245,0.7);font-size:1.1rem;line-height:1.8;margin-bottom:1rem}
+    .philosophy-content p strong{color:var(--cream)}
+    .about{padding:8rem 2rem;max-width:800px;margin:0 auto;text-align:center}
+    .about h2{font-size:clamp(2rem,4vw,2.5rem);margin-bottom:1.5rem}
+    .about p{color:var(--ink-light);font-size:1.1rem;line-height:1.8;margin-bottom:1rem}
+    .about-name{font-family:'Fraunces',serif;font-size:1.25rem;color:var(--ink);margin-top:2rem}
+    .contact{padding:8rem 2rem;background:#F0EDE8;text-align:center}
+    .contact-inner{max-width:600px;margin:0 auto}
+    .contact h2{font-size:clamp(2rem,4vw,2.75rem);margin-bottom:1rem}
+    .contact p{color:var(--ink-light);margin-bottom:2rem}
+    .contact-email{font-family:'Fraunces',serif;font-size:1.5rem;color:var(--accent);text-decoration:none}
+    footer{padding:2rem;text-align:center;color:#8a8a8a;font-size:0.85rem}
+    @media(max-width:900px){.hero-content,.philosophy-inner,.service-grid{grid-template-columns:1fr}.hero-content{text-align:center}.hero-image{order:-1}}
+    </style>
+  </head>
+  <body>
+    <nav><a href="#" class="logo">Thumb Studio</a>a><div class="nav-links"><a href="#services">Services</a>a><a href="#philosophy">Philosophy</a>a><a href="#about">About</a>a><a href="#contact">Contact</a>a></div>div></nav>
+  <section class="hero"><div class="hero-content"><div class="hero-text"><h1>We help startups build things that <em>last</em></h1><p>Fractional leadership and strategy consulting for founders ready to scale with intention, find product-market fit, and create long-term value.</p><a href="#contact" class="cta-btn">Start a conversation</a>a></div>div><div class="hero-image"><img src="images/thumb-astronaut.png" alt="Astronaut"></div>div></div>div></section>section>
+  <section class="credentials"><div class="credentials-inner"><div class="credential">Background<span>Yale SOM</span></div>div><div class="credential">Experience<span>IDEO</span></div>div><div class="credential">Practice<span>Doblin</span></div>div><div class="credential">Approach<span>Human-Centered Design</span></div>div></div>div></section>section>
+  <section class="services" id="services"><div class="section-header"><div class="section-label">How We Work</div>div><h2>Partnership that goes beyond advice</h2></div>div><div class="service-grid"><div class="service-card"><div class="service-icon">&#9733;</div>div><h3>Fractional Leadership</h3><p>Experienced operators joining your team part-time, bringing executive perspective exactly when you need it most.</p></div>div><div class="service-card"><div class="service-icon">&#8599;</div>div><h3>Growth Strategy</h3><p>Sustainable approaches to scaling—building systems, processes, and culture that grow with your business.</p></div>div><div class="service-card"><div class="service-icon">&#9678;</div>div><h3>Product-Market Fit</h3><p>Navigating pivots and finding fit through structured experimentation and deep customer insight.</p></div>div></div>div></section>section>
+  <section class="philosophy" id="philosophy"><div class="philosophy-inner"><div class="philosophy-image"><img src="images/thumb-construction.png" alt="Construction"></div>div><div class="philosophy-content"><div class="section-label">Our Philosophy</div>div><h2>Great things are built, not rushed</h2><p>The name Thumb Studio comes from a simple idea: <strong>the thumb is what makes us human</strong>. It allows us to grip tools, to create, to build.</p><p>Every startups journey is unique. We work alongside founders to understand your specific context then help you build something that lasts.</p></div>div></div>div></section>section>
+  <section class="about" id="about"><div class="section-label">About</div>div><h2>Human-centered strategy</h2><p>Thumb Studio was founded on the belief that the best businesses are built by deeply understanding people.</p><p>With roots in human-centered design from IDEO and Doblin, and strategic foundations from Yale School of Management, we bring a unique perspective to startup consulting.</p><div class="about-name">Yousef Aly, Founder</div>div></section>section>
+  <section class="contact" id="contact"><div class="contact-inner"><div class="section-label">Get in Touch</div>div><h2>Ready to build something?</h2><p>Lets explore how we can help your startup reach its potential.</p><a href="mailto:yousef@thumbstud.io" class="contact-email">yousef@thumbstud.io</a>a></div>div></section>section>
+  <footer>2025 Thumb Studio. All rights reserved.</footer>
+  </body>
+</html>html></footer></strong></p></p></span></span></p></em></h1></nav>
+  </body>
+  </style></title>
+  </head>
