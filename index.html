@@ -3,521 +3,561 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thumb Studio | Strategy Consulting for Startups</title>
-    <meta name="description" content="Fractional leadership and strategy consulting for startups looking to scale, pivot, or find product-market fit.">
+    <title>Thumb Studio | Fractional leadership and strategy for startups</title>
+    <meta name="description" content="Thumb Studio is a fractional leadership and strategy practice for startups: an experienced operator on your team part-time, product-market fit, and systems that scale.">
+    <meta name="theme-color" content="#F3F0EA">
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thumbstud.io/">
+    <meta property="og:title" content="Thumb Studio — Innovation, by rule of thumb.">
+    <meta property="og:description" content="Fractional leadership and strategy for startups. An experienced operator on your team, part-time.">
+    <meta property="og:image" content="https://thumbstud.io/images/og.png">
+    <meta name="twitter:card" content="summary_large_image">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --cream: #FAF8F5;
-            --cream-dark: #F0EDE8;
-            --ink: #1a1a1a;
-            --ink-light: #4a4a4a;
-            --ink-muted: #8a8a8a;
-            --accent: #E07A5F;
-            --accent-dark: #C96A52;
+            --graphite: #0E1116;
+            --cobalt: #2447E0;
+            --cobalt-dark: #1B37B8;
+            --clay: #D9774A;
+            --bone: #F3F0EA;
+            --white: #FFFFFF;
+            --steel: #555A63;
+            --line: rgba(14, 17, 22, 0.12);
+            --line-dark: rgba(243, 240, 234, 0.14);
+            --font-sans: "Geist", "Helvetica Neue", Arial, sans-serif;
+            --font-mono: "Geist Mono", ui-monospace, Menlo, monospace;
+            --font-hand: "Instrument Serif", Georgia, serif;
+            --max: 1200px;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--cream);
-            color: var(--ink);
-            line-height: 1.6;
+            font-family: var(--font-sans);
+            background: var(--bone);
+            color: var(--graphite);
             font-size: 16px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
 
-        h1, h2, h3 {
-            font-family: 'Fraunces', serif;
+        img { display: block; max-width: 100%; }
+
+        h1, h2, h3 { font-weight: 500; line-height: 1.08; letter-spacing: -0.04em; }
+        h3 { letter-spacing: -0.02em; }
+
+        :focus-visible { outline: 2px solid var(--cobalt); outline-offset: 3px; }
+
+        /* The hand: one italic line per surface */
+        .hand {
+            font-family: var(--font-hand);
+            font-style: italic;
             font-weight: 400;
-            line-height: 1.2;
+            letter-spacing: 0;
         }
 
+        .hand.underlined { position: relative; display: inline-block; }
+
+        .hand.underlined::after {
+            content: "";
+            position: absolute;
+            left: 0.02em;
+            right: 0.02em;
+            bottom: -0.04em;
+            height: 0.16em;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 8' preserveAspectRatio='none'%3E%3Cpath d='M1 5.6C20 3.4 40 6.6 60 4.4S90 5.8 99 3.8' fill='none' stroke='%23D9774A' stroke-width='2.2' stroke-linecap='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") no-repeat;
+            background-size: 100% 100%;
+        }
+
+        /* Mono labels, numbers, section indexes */
+        .label {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 400;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--steel);
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--cobalt);
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 0.9rem 1.5rem;
+            border-radius: 4px;
+            transition: background 0.15s;
+        }
+
+        .btn:hover { background: var(--cobalt-dark); }
+
+        .link-mono {
+            font-family: var(--font-mono);
+            font-size: 0.78rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--graphite);
+            text-decoration: none;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 2px;
+            transition: border-color 0.15s;
+        }
+
+        .link-mono:hover { border-color: var(--graphite); }
+
+        /* Nav */
         nav {
             position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 1.25rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(250, 248, 245, 0.9);
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            background: rgba(243, 240, 234, 0.88);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            z-index: 100;
-            border-bottom: 1px solid rgba(0,0,0,0.04);
+            border-bottom: 1px solid var(--line);
         }
 
-        .logo {
-            font-family: 'Fraunces', serif;
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--ink);
-            text-decoration: none;
-        }
-
-        .nav-links {
+        .nav-inner {
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: 1.1rem 2rem;
             display: flex;
-            gap: 2rem;
+            align-items: center;
+            justify-content: space-between;
         }
+
+        .logo img { height: 26px; width: auto; }
+
+        .nav-links { display: flex; gap: 2rem; }
 
         .nav-links a {
+            font-family: var(--font-mono);
+            font-size: 0.78rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--steel);
             text-decoration: none;
-            color: var(--ink-light);
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: color 0.2s;
+            transition: color 0.15s;
         }
 
-        .nav-links a:hover {
-            color: var(--ink);
-        }
+        .nav-links a:hover { color: var(--graphite); }
 
+        /* Hero */
         .hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 8rem 2rem 4rem;
-            max-width: 1400px;
+            max-width: var(--max);
             margin: 0 auto;
+            padding: 9.5rem 2rem 5rem;
         }
 
-        .hero-content {
+        .hero-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 8fr 4fr;
             gap: 4rem;
             align-items: center;
         }
 
-        .hero-text h1 {
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
-            margin-bottom: 1.5rem;
-            color: var(--ink);
+        .hero h1 {
+            font-size: clamp(2.6rem, 5.2vw, 4.1rem);
+            margin: 1.25rem 0 1.75rem;
         }
 
-        .hero-text h1 em {
-            font-style: italic;
-            color: var(--accent);
-        }
+        .hero h1 .hand { font-size: 1.08em; }
 
-        .hero-text p {
+        .hero p {
             font-size: 1.15rem;
-            color: var(--ink-light);
-            margin-bottom: 2rem;
-            max-width: 500px;
-            line-height: 1.7;
-        }
-
-        .cta-btn {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background: var(--ink);
-            color: var(--cream);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            border-radius: 100px;
-            transition: all 0.2s;
-        }
-
-        .cta-btn:hover {
-            background: var(--ink-light);
-            transform: translateY(-2px);
-        }
-
-        .hero-image {
-            position: relative;
-        }
-
-        .hero-image img {
-            width: 100%;
+            color: var(--steel);
             max-width: 520px;
-            border-radius: 24px;
-            box-shadow: 0 40px 80px rgba(0,0,0,0.08);
+            line-height: 1.65;
+            margin-bottom: 2.25rem;
         }
 
-        .credentials {
-            padding: 3rem 2rem;
-            border-top: 1px solid rgba(0,0,0,0.06);
-            border-bottom: 1px solid rgba(0,0,0,0.06);
-        }
+        .hero-actions { display: flex; align-items: center; gap: 1.75rem; flex-wrap: wrap; }
 
-        .credentials-inner {
-            max-width: 1200px;
-            margin: 0 auto;
+        .panel {
+            background: var(--graphite);
+            aspect-ratio: 4 / 5;
+            position: relative;
             display: flex;
-            justify-content: center;
             align-items: center;
-            gap: 3rem;
-            flex-wrap: wrap;
+            justify-content: center;
+            padding: 3rem;
         }
 
-        .credential {
-            text-align: center;
-            color: var(--ink-muted);
-            font-size: 0.85rem;
-            font-weight: 500;
-            letter-spacing: 0.02em;
-        }
+        .panel img { width: 40%; max-width: 180px; }
 
-        .credential span {
-            display: block;
-            font-family: 'Fraunces', serif;
-            font-size: 1rem;
-            color: var(--ink-light);
-            margin-top: 0.25rem;
-        }
-
-        .services {
-            padding: 8rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-label {
-            font-size: 0.75rem;
+        .panel .corner {
+            position: absolute;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            letter-spacing: 0.08em;
             text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--accent);
-            margin-bottom: 1rem;
-            font-weight: 600;
+            color: rgba(243, 240, 234, 0.5);
         }
 
-        .section-header h2 {
-            font-size: clamp(2rem, 4vw, 2.75rem);
-            max-width: 600px;
+        .corner.tl { top: 1.25rem; left: 1.25rem; }
+        .corner.tr { top: 1.25rem; right: 1.25rem; }
+        .corner.bl { bottom: 1.25rem; left: 1.25rem; }
+        .corner.br { bottom: 1.25rem; right: 1.25rem; }
+
+        /* Credentials strip */
+        .creds { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
+        .creds-grid {
+            max-width: var(--max);
             margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
         }
 
+        .cred { padding: 1.75rem 1.5rem; border-left: 1px solid var(--line); }
+        .cred:last-child { border-right: 1px solid var(--line); }
+        .cred .label { margin-bottom: 0.35rem; }
+        .cred strong { font-weight: 500; font-size: 1.05rem; letter-spacing: -0.01em; }
+
+        /* Sections */
+        .section { max-width: var(--max); margin: 0 auto; padding: 7rem 2rem; }
+
+        .section-head {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+            align-items: end;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .section-head h2 { font-size: clamp(2rem, 4vw, 3rem); }
+
+        /* Services */
         .service-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
+            border: 1px solid var(--line);
+            background: var(--white);
         }
 
-        .service-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 20px;
-            border: 1px solid rgba(0,0,0,0.04);
-            transition: all 0.3s;
-        }
+        .service { padding: 2.5rem 2rem; border-right: 1px solid var(--line); }
+        .service:last-child { border-right: 0; }
+        .service .label { margin-bottom: 2.75rem; }
+        .service h3 { font-size: 1.35rem; margin-bottom: 0.75rem; }
+        .service p { color: var(--steel); font-size: 0.98rem; }
 
-        .service-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.06);
-        }
+        /* Philosophy */
+        .philosophy { background: var(--graphite); color: var(--bone); }
 
-        .service-icon {
-            font-size: 2rem;
-            margin-bottom: 1.25rem;
-        }
-
-        .service-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-            font-weight: 600;
-        }
-
-        .service-card p {
-            color: var(--ink-light);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .philosophy {
-            padding: 8rem 2rem;
-            background: var(--ink);
-            color: var(--cream);
-        }
-
-        .philosophy-inner {
-            max-width: 1200px;
+        .philosophy .inner {
+            max-width: var(--max);
             margin: 0 auto;
+            padding: 7rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+        }
+
+        .philosophy .label { color: rgba(243, 240, 234, 0.55); }
+
+        .philosophy h2 {
+            font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+            color: var(--white);
+            margin: 1.25rem 0 1.5rem;
+        }
+
+        .philosophy h2 .hand { font-size: 1.08em; }
+
+        .philosophy p {
+            color: rgba(243, 240, 234, 0.72);
+            font-size: 1.08rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .principles { border-top: 1px solid var(--line-dark); align-self: center; }
+
+        .principle {
+            display: grid;
+            grid-template-columns: 3.5rem 1fr;
+            gap: 1rem;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--line-dark);
+        }
+
+        .principle .label { padding-top: 0.35rem; }
+        .principle h3 { font-size: 1.15rem; color: var(--white); margin-bottom: 0.3rem; }
+        .principle p { font-size: 0.98rem; margin: 0; }
+
+        /* About */
+        .about .inner {
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: 7rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .about h2 { font-size: clamp(2rem, 4vw, 3rem); margin-top: 1.25rem; }
+        .about p { color: var(--steel); font-size: 1.08rem; line-height: 1.7; margin-bottom: 1.25rem; }
+
+        .byline { margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--line); }
+        .byline strong { display: block; font-weight: 500; margin-bottom: 0.2rem; }
+
+        /* Contact */
+        .contact { background: var(--white); border-top: 1px solid var(--line); }
+
+        .contact .inner {
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: 7rem 2rem;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
         }
 
-        .philosophy-image img {
-            width: 100%;
-            max-width: 480px;
-            border-radius: 20px;
-        }
+        .contact h2 { font-size: clamp(2.2rem, 4.5vw, 3.5rem); margin-top: 1.25rem; }
+        .contact p { color: var(--steel); font-size: 1.08rem; line-height: 1.7; }
 
-        .philosophy-content .section-label {
-            color: var(--accent);
-        }
+        .contact-card { border-left: 1px solid var(--line); padding-left: 3rem; }
+        .contact-card .label { margin-bottom: 0.75rem; }
 
-        .philosophy-content h2 {
-            font-size: clamp(2rem, 4vw, 2.5rem);
-            margin-bottom: 1.5rem;
-            color: var(--cream);
-        }
-
-        .philosophy-content p {
-            color: rgba(250, 248, 245, 0.7);
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 1rem;
-        }
-
-        .philosophy-content p strong {
-            color: var(--cream);
-        }
-
-        .about {
-            padding: 8rem 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .about h2 {
-            font-size: clamp(2rem, 4vw, 2.5rem);
-            margin-bottom: 1.5rem;
-        }
-
-        .about p {
-            color: var(--ink-light);
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 1rem;
-        }
-
-        .about-name {
-            font-family: 'Fraunces', serif;
-            font-size: 1.25rem;
-            color: var(--ink);
-            margin-top: 2rem;
-        }
-
-        .contact {
-            padding: 8rem 2rem;
-            background: var(--cream-dark);
-            text-align: center;
-        }
-
-        .contact-inner {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .contact h2 {
-            font-size: clamp(2rem, 4vw, 2.75rem);
-            margin-bottom: 1rem;
-        }
-
-        .contact p {
-            color: var(--ink-light);
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-        }
-
-        .contact-email {
-            font-family: 'Fraunces', serif;
-            font-size: 1.5rem;
-            color: var(--accent);
+        .email {
+            display: inline-block;
+            font-size: clamp(1.4rem, 3vw, 2rem);
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: var(--cobalt);
             text-decoration: none;
             border-bottom: 2px solid transparent;
-            transition: border-color 0.2s;
+            transition: border-color 0.15s;
+            margin-bottom: 2rem;
         }
 
-        .contact-email:hover {
-            border-color: var(--accent);
+        .email:hover { border-color: var(--cobalt); }
+
+        /* Footer */
+        footer { background: var(--graphite); color: rgba(243, 240, 234, 0.6); }
+
+        .footer-inner {
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: 3.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 2rem;
+            flex-wrap: wrap;
         }
 
-        footer {
-            padding: 2rem;
-            text-align: center;
-            color: var(--ink-muted);
-            font-size: 0.85rem;
-            border-top: 1px solid rgba(0,0,0,0.06);
+        .footer-inner img { width: 260px; height: auto; }
+
+        .footer-meta {
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            text-align: right;
+            line-height: 2.1;
         }
+
+        .footer-meta a { color: inherit; text-decoration: none; }
+        .footer-meta a:hover { color: var(--white); }
 
         @media (max-width: 900px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .hero-text p {
-                margin: 0 auto 2rem;
-            }
-
-            .hero-image {
-                order: -1;
-            }
-
-            .hero-image img {
-                max-width: 400px;
-                margin: 0 auto;
-                display: block;
-            }
-
-            .service-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .philosophy-inner {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .philosophy-image img {
-                margin: 0 auto;
-            }
-
-            .nav-links {
-                gap: 1.25rem;
-            }
+            .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .panel { aspect-ratio: 16 / 10; }
+            .creds-grid { grid-template-columns: repeat(2, 1fr); }
+            .cred:nth-child(2) { border-right: 1px solid var(--line); }
+            .cred:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+            .section-head { grid-template-columns: 1fr; gap: 1rem; }
+            .service-grid { grid-template-columns: 1fr; }
+            .service { border-right: 0; border-bottom: 1px solid var(--line); }
+            .service:last-child { border-bottom: 0; }
+            .philosophy .inner, .about .inner, .contact .inner { grid-template-columns: 1fr; gap: 3rem; }
+            .contact-card { border-left: 0; border-top: 1px solid var(--line); padding-left: 0; padding-top: 2.5rem; }
         }
 
-        @media (max-width: 600px) {
-            nav {
-                padding: 1rem 1.25rem;
-            }
-
-            .hero {
-                padding: 6rem 1.25rem 3rem;
-            }
-
-            .hero-text h1 {
-                font-size: 2rem;
-            }
-
-            .services,
-            .philosophy,
-            .about,
-            .contact {
-                padding: 5rem 1.25rem;
-            }
-
-            .credentials-inner {
-                gap: 2rem;
-            }
+        @media (max-width: 640px) {
+            .nav-inner { padding: 1rem 1.25rem; }
+            .nav-links a:not(:last-child) { display: none; }
+            .hero { padding: 7.5rem 1.25rem 3.5rem; }
+            .hero h1 { font-size: 2.5rem; }
+            .creds-grid { padding: 0 1.25rem; }
+            .cred { padding: 1.25rem 1rem; }
+            .section, .philosophy .inner, .about .inner, .contact .inner { padding: 5rem 1.25rem; }
+            .service { padding: 2rem 1.5rem; }
+            .footer-inner { padding: 3rem 1.25rem; flex-direction: column; align-items: flex-start; }
+            .footer-meta { text-align: left; }
         }
     </style>
 </head>
 <body>
     <nav>
-        <a href="#" class="logo">Thumb Studio</a>
-        <div class="nav-links">
-            <a href="#services">Services</a>
-            <a href="#philosophy">Philosophy</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+        <div class="nav-inner">
+            <a href="#top" class="logo"><img src="images/logo-primary.svg" alt="Thumb Studio"></a>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#philosophy">Why the name</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
         </div>
     </nav>
 
-    <section class="hero">
-        <div class="hero-content">
+    <section class="hero" id="top">
+        <div class="hero-grid">
             <div class="hero-text">
-                <h1>We help startups build things that <em>last</em></h1>
-                <p>Fractional leadership and strategy consulting for founders ready to scale with intention, find product-market fit, and create long-term value.</p>
-                <a href="#contact" class="cta-btn">Start a conversation</a>
+                <div class="label">Fractional leadership &amp; strategy</div>
+                <h1>We help founders build<br><span class="hand underlined">things that last.</span></h1>
+                <p>Thumb Studio is a strategy practice for startups. We join your team part-time, help you find product-market fit, and build the operating systems that let you scale with intention.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn">Start a conversation</a>
+                    <a href="#services" class="link-mono">What we do &darr;</a>
+                </div>
             </div>
-            <div class="hero-image">
-                <img src="images/Gemini_Generated_Image_dgqr2ldgqr2ldgqr.png" alt="Astronaut mining for value - representing the pursuit of startup success">
-            </div>
-        </div>
-    </section>
-
-    <section class="credentials">
-        <div class="credentials-inner">
-            <div class="credential">
-                Background
-                <span>Yale SOM</span>
-            </div>
-            <div class="credential">
-                Experience
-                <span>IDEO</span>
-            </div>
-            <div class="credential">
-                Practice
-                <span>Doblin</span>
-            </div>
-            <div class="credential">
-                Approach
-                <span>Human-Centered Design</span>
+            <div class="panel">
+                <span class="corner tl">The Print</span>
+                <span class="corner tr">Fig. 01</span>
+                <img src="images/mark-cobalt.svg" alt="The Thumb Studio mark: a thumbprint with three ridges">
+                <span class="corner bl">Thumb Studio LLC</span>
+                <span class="corner br">thumbstud.io</span>
             </div>
         </div>
     </section>
 
-    <section class="services" id="services">
-        <div class="section-header">
-            <div class="section-label">How We Work</div>
-            <h2>Partnership that goes beyond advice</h2>
+    <section class="creds">
+        <div class="creds-grid">
+            <div class="cred">
+                <div class="label">Background</div>
+                <strong>Yale SOM</strong>
+            </div>
+            <div class="cred">
+                <div class="label">Experience</div>
+                <strong>IDEO</strong>
+            </div>
+            <div class="cred">
+                <div class="label">Practice</div>
+                <strong>Doblin</strong>
+            </div>
+            <div class="cred">
+                <div class="label">Approach</div>
+                <strong>Human-Centered Design</strong>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="services">
+        <div class="section-head">
+            <div class="label">01 &mdash; What we do</div>
+            <h2>We do the work alongside you.</h2>
         </div>
         <div class="service-grid">
-            <div class="service-card">
-                <div class="service-icon">&#9733;</div>
+            <div class="service">
+                <div class="label">01</div>
                 <h3>Fractional Leadership</h3>
-                <p>Experienced operator joining your team part-time, bringing executive perspective exactly when you need it most.</p>
+                <p>An experienced operator on your team, part-time. Executive perspective on the decisions that matter, exactly when you need it, without the full-time hire.</p>
             </div>
-            <div class="service-card">
-                <div class="service-icon">&#8599;</div>
+            <div class="service">
+                <div class="label">02</div>
                 <h3>Growth Strategy</h3>
-                <p>Sustainable approaches to scaling—building systems, processes, and culture that grow with your business.</p>
+                <p>Sustainable scaling. We build the systems, processes, and culture that grow with the business instead of breaking under it.</p>
             </div>
-            <div class="service-card">
-                <div class="service-icon">&#9678;</div>
+            <div class="service">
+                <div class="label">03</div>
                 <h3>Product-Market Fit</h3>
-                <p>Navigating pivots and finding fit through structured experimentation and deep customer insight.</p>
+                <p>Structured experiments and deep customer insight. We help you navigate pivots and find the fit that makes everything else easier.</p>
             </div>
         </div>
     </section>
 
     <section class="philosophy" id="philosophy">
-        <div class="philosophy-inner">
-            <div class="philosophy-image">
-                <img src="images/Gemini_Generated_Image_te4s8pte4s8pte4s.png" alt="Building something great - a thumbs up under construction">
+        <div class="inner">
+            <div>
+                <div class="label">02 &mdash; Why the name</div>
+                <h2>The thumb is what makes us <span class="hand underlined">human.</span></h2>
+                <p>It&rsquo;s what allows us to grip tools, to create, to build.</p>
+                <p>Every startup&rsquo;s journey is unique. We don&rsquo;t believe in one-size-fits-all playbooks or growth-at-all-costs mentalities. We work alongside founders to understand your specific context, then help you build something that lasts.</p>
             </div>
-            <div class="philosophy-content">
-                <div class="section-label">Our Philosophy</div>
-                <h2>Great things are built, not rushed</h2>
-                <p>The name "Thumb Studio" comes from a simple idea: <strong>the thumb is what makes us human</strong>. It's what allows us to grip tools, to create, to build.</p>
-                <p>Every startup's journey is unique. We don't believe in one-size-fits-all playbooks or growth-at-all-costs mentalities. We work alongside founders to understand your specific context—then help you build something that lasts.</p>
+            <div class="principles">
+                <div class="principle">
+                    <div class="label">01</div>
+                    <div>
+                        <h3>People first</h3>
+                        <p>Customers, teams, stakeholders. Good strategy starts with understanding them.</p>
+                    </div>
+                </div>
+                <div class="principle">
+                    <div class="label">02</div>
+                    <div>
+                        <h3>No playbooks</h3>
+                        <p>Your context decides the plan, not a template.</p>
+                    </div>
+                </div>
+                <div class="principle">
+                    <div class="label">03</div>
+                    <div>
+                        <h3>Built, not rushed</h3>
+                        <p>Great things take time. We help you spend it well.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="about" id="about">
-        <div class="section-label">About</div>
-        <h2>Human-centered strategy</h2>
-        <p>Thumb Studio was founded on the belief that the best businesses are built by deeply understanding people—customers, teams, and stakeholders alike.</p>
-        <p>With roots in human-centered design from IDEO and Doblin, and strategic foundations from Yale School of Management, we bring a unique perspective to startup consulting: rigorous strategy meets creative problem-solving.</p>
-        <div class="about-name">Yousef Aly, Founder</div>
+        <div class="inner">
+            <div>
+                <div class="label">03 &mdash; About</div>
+                <h2>Human-centered strategy, rigorously applied.</h2>
+            </div>
+            <div>
+                <p>Thumb Studio was founded on the belief that the best businesses are built by deeply understanding people: customers, teams, and stakeholders alike.</p>
+                <p>With roots in human-centered design from IDEO and Doblin, and strategic foundations from Yale School of Management, we bring a specific perspective to startup consulting: rigorous strategy meets creative problem-solving.</p>
+                <div class="byline">
+                    <strong>Yousef Aly</strong>
+                    <div class="label">Founder</div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="contact" id="contact">
-        <div class="contact-inner">
-            <div class="section-label">Get in Touch</div>
-            <h2>Ready to build something?</h2>
-            <p>Let's explore how we can help your startup reach its potential.</p>
-            <a href="mailto:yousef@thumbstud.io" class="contact-email">yousef@thumbstud.io</a>
+        <div class="inner">
+            <div>
+                <div class="label">04 &mdash; Get in touch</div>
+                <h2>Ready to build something?</h2>
+                <p>Tell us where you are and what&rsquo;s in the way. We&rsquo;ll tell you honestly whether we can help.</p>
+            </div>
+            <div class="contact-card">
+                <div class="label">Email</div>
+                <a href="mailto:yousef@thumbstud.io" class="email">yousef@thumbstud.io</a>
+                <div><a href="mailto:yousef@thumbstud.io" class="btn">Start a conversation</a></div>
+            </div>
         </div>
     </section>
 
     <footer>
-        &copy; 2025 Thumb Studio. All rights reserved.
+        <div class="footer-inner">
+            <img src="images/logo-tagline-reversed.svg" alt="Thumb Studio. Innovation, by rule of thumb.">
+            <div class="footer-meta">
+                <a href="mailto:yousef@thumbstud.io">yousef@thumbstud.io</a><br>
+                &copy; 2026 Thumb Studio LLC
+            </div>
+        </div>
     </footer>
 </body>
 </html>
