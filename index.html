@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thumb Studio | Fractional leadership and strategy for startups</title>
-    <meta name="description" content="Thumb Studio is a fractional leadership and strategy practice for startups: an experienced operator on your team part-time, product-market fit, and systems that scale.">
+    <title>Thumb Studio | Fractional innovation leadership for founders and leadership teams</title>
+    <meta name="description" content="Thumb Studio is a fractional Chief Innovation Officer practice. One-day workshops, two-week innovation sprints, and senior innovation leadership on your team, part-time.">
     <meta name="theme-color" content="#F3F0EA">
 
     <link rel="icon" href="/favicon.ico" sizes="any">
@@ -15,7 +15,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://thumbstud.io/">
     <meta property="og:title" content="Thumb Studio — Innovation, by rule of thumb.">
-    <meta property="og:description" content="Fractional leadership and strategy for startups. An experienced operator on your team, part-time.">
+    <meta property="og:description" content="A Chief Innovation Officer, when you need one. Workshops, sprints, and fractional innovation leadership.">
     <meta property="og:image" content="https://thumbstud.io/images/og.png">
     <meta name="twitter:card" content="summary_large_image">
 
@@ -243,19 +243,211 @@
 
         .section-head h2 { font-size: clamp(2rem, 4vw, 3rem); }
 
-        /* Services */
-        .service-grid {
+        /* Shared */
+        .section-intro {
+            font-size: 1.15rem;
+            color: var(--steel);
+            max-width: 640px;
+            line-height: 1.65;
+            margin: -1.5rem 0 2.5rem;
+        }
+
+        /* Engagements ladder */
+        .ladder {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             border: 1px solid var(--line);
             background: var(--white);
         }
 
-        .service { padding: 2.5rem 2rem; border-right: 1px solid var(--line); }
-        .service:last-child { border-right: 0; }
-        .service .label { margin-bottom: 2.75rem; }
-        .service h3 { font-size: 1.35rem; margin-bottom: 0.75rem; }
-        .service p { color: var(--steel); font-size: 0.98rem; }
+        .rung {
+            padding: 2.5rem 2rem;
+            border-right: 1px solid var(--line);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .rung:last-child { border-right: 0; }
+        .rung-head { display: flex; justify-content: space-between; align-items: baseline; }
+
+        .rung .duration {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--cobalt);
+        }
+
+        .rung h3 { font-size: 1.75rem; letter-spacing: -0.04em; }
+        .rung .rung-line { font-size: 1.25rem; color: var(--steel); line-height: 1.3; }
+        .rung p { color: var(--steel); font-size: 0.98rem; }
+
+        .rung-list {
+            list-style: none;
+            border: 1px solid var(--line);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .rung-list li {
+            display: flex;
+            gap: 0.75rem;
+            padding: 0.65rem 0.9rem;
+            background: var(--bone);
+            font-size: 0.92rem;
+            line-height: 1.45;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .rung-list li:last-child { border-bottom: 0; }
+        .rung-list .key { font-family: var(--font-mono); color: var(--cobalt); flex-shrink: 0; font-size: 0.85rem; }
+        .rung-list strong { font-weight: 600; }
+
+        .rung-foot { margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--line); }
+        .rung-foot .label { margin-bottom: 0.3rem; }
+        .rung-foot p { color: var(--graphite); font-size: 0.95rem; }
+
+        .rung-dark { background: var(--graphite); color: var(--bone); }
+        .rung-dark .label, .rung-dark .duration { color: rgba(243, 240, 234, 0.55); }
+        .rung-dark h3 { color: var(--white); }
+        .rung-dark p, .rung-dark .rung-line { color: rgba(243, 240, 234, 0.82); }
+        .rung-dark .rung-list { border-color: var(--line-dark); }
+        .rung-dark .rung-list li { background: var(--graphite); border-color: var(--line-dark); color: var(--bone); }
+        .rung-dark .rung-foot { border-color: var(--line-dark); }
+        .rung-dark .rung-foot p { color: var(--bone); }
+
+        .ladder-foot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 2.5rem;
+            padding-top: 1.75rem;
+            border-top: 1px solid var(--graphite);
+        }
+
+        .ladder-foot p { color: var(--steel); font-size: 1.08rem; max-width: 720px; line-height: 1.6; }
+        .ladder-foot .btn { flex-shrink: 0; }
+
+        /* Frameworks */
+        .framework { margin-bottom: 0; }
+        .framework + .bridge + .framework { margin-top: 0; }
+
+        .framework-head {
+            display: grid;
+            grid-template-columns: 7fr 5fr;
+            gap: 3rem;
+            align-items: end;
+            margin-bottom: 2rem;
+        }
+
+        .framework-kicker { color: var(--cobalt); margin-bottom: 0.75rem; }
+
+        .framework-title {
+            font-size: clamp(2.4rem, 5.5vw, 4.5rem);
+            letter-spacing: -0.05em;
+            line-height: 0.95;
+            margin-bottom: 0.75rem;
+        }
+
+        .framework-line { font-size: clamp(1.3rem, 2.4vw, 1.8rem); color: var(--steel); line-height: 1.2; }
+        .framework-intro p { color: var(--steel); font-size: 1.05rem; line-height: 1.6; margin-bottom: 0.75rem; }
+        .framework-intro strong { color: var(--graphite); font-weight: 500; }
+
+        .sense-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border: 1px solid var(--line);
+            background: var(--white);
+        }
+
+        .sense {
+            padding: 2.25rem 2rem;
+            border-right: 1px solid var(--line);
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+            color: var(--graphite);
+        }
+
+        .sense:last-child { border-right: 0; }
+        .sense-top { display: flex; justify-content: space-between; align-items: flex-start; color: var(--cobalt); }
+        .sense h4 { font-size: 2.1rem; font-weight: 600; letter-spacing: -0.045em; line-height: 1; }
+        .sense .sense-q { font-size: 1.2rem; font-weight: 500; letter-spacing: -0.02em; line-height: 1.3; }
+        .sense p { color: var(--steel); font-size: 0.95rem; line-height: 1.5; }
+        .sense .label { margin-top: 0.25rem; }
+
+        .sense-band {
+            margin-top: auto;
+            background: var(--graphite);
+            color: var(--bone);
+            padding: 1.1rem 1.25rem;
+        }
+
+        .sense-band .label { color: rgba(243, 240, 234, 0.55); margin: 0 0 0.35rem; }
+        .sense-band p { color: var(--bone); font-weight: 500; font-size: 1rem; }
+
+        .scale {
+            list-style: none;
+            margin-top: auto;
+            border: 1px solid var(--line);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .scale li {
+            display: flex;
+            gap: 0.75rem;
+            padding: 0.7rem 0.9rem;
+            background: var(--bone);
+            font-size: 0.9rem;
+            line-height: 1.45;
+            color: var(--steel);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .scale li:last-child { border-bottom: 0; }
+        .scale .key { font-family: var(--font-mono); flex-shrink: 0; color: var(--steel); }
+        .scale .scale-top { background: var(--graphite); color: var(--bone); }
+        .scale .scale-top .key { color: rgba(243, 240, 234, 0.55); }
+
+        .framework-foot {
+            display: grid;
+            grid-template-columns: 7fr 5fr;
+            gap: 3rem;
+            align-items: center;
+            margin-top: 2rem;
+            padding: 1.75rem 0 0;
+            border-top: 1px solid var(--graphite);
+        }
+
+        .framework-foot .label { margin-bottom: 0.4rem; }
+        .framework-foot p { font-size: 1.15rem; line-height: 1.45; letter-spacing: -0.01em; }
+        .framework-foot .hand { font-size: 1.1em; color: var(--steel); }
+        .framework-map { line-height: 1.8; text-transform: none; letter-spacing: 0.02em; font-size: 0.8rem; }
+
+        .framework-foot-dark {
+            background: var(--graphite);
+            color: var(--bone);
+            padding: 2rem 2.5rem;
+            border-top: 0;
+        }
+
+        .framework-foot-dark .label { color: rgba(243, 240, 234, 0.55); }
+        .framework-foot-dark .hand { color: rgba(243, 240, 234, 0.85); }
+
+        .bridge {
+            display: flex;
+            align-items: baseline;
+            gap: 1.5rem;
+            padding: 4rem 0;
+            margin: 2rem 0;
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .bridge .hand { font-size: clamp(1.6rem, 3.2vw, 2.4rem); line-height: 1.15; }
 
         /* Philosophy */
         .philosophy { background: var(--graphite); color: var(--bone); }
@@ -384,9 +576,13 @@
             .cred:nth-child(2) { border-right: 1px solid var(--line); }
             .cred:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
             .section-head { grid-template-columns: 1fr; gap: 1rem; }
-            .service-grid { grid-template-columns: 1fr; }
-            .service { border-right: 0; border-bottom: 1px solid var(--line); }
-            .service:last-child { border-bottom: 0; }
+            .ladder, .sense-grid { grid-template-columns: 1fr; }
+            .rung, .sense { border-right: 0; border-bottom: 1px solid var(--line); }
+            .rung:last-child, .sense:last-child { border-bottom: 0; }
+            .rung-dark { border-bottom: 0; }
+            .ladder-foot { flex-direction: column; align-items: flex-start; }
+            .framework-head, .framework-foot { grid-template-columns: 1fr; gap: 1.5rem; }
+            .bridge { flex-direction: column; gap: 0.5rem; padding: 3rem 0; }
             .philosophy .inner, .about .inner, .contact .inner { grid-template-columns: 1fr; gap: 3rem; }
             .contact-card { border-left: 0; border-top: 1px solid var(--line); padding-left: 0; padding-top: 2.5rem; }
         }
@@ -399,7 +595,8 @@
             .creds-grid { padding: 0 1.25rem; }
             .cred { padding: 1.25rem 1rem; }
             .section, .philosophy .inner, .about .inner, .contact .inner { padding: 5rem 1.25rem; }
-            .service { padding: 2rem 1.5rem; }
+            .rung, .sense { padding: 1.75rem 1.5rem; }
+            .framework-foot-dark { padding: 1.5rem 1.25rem; }
             .footer-inner { padding: 3rem 1.25rem; flex-direction: column; align-items: flex-start; }
             .footer-meta { text-align: left; }
         }
@@ -410,7 +607,8 @@
         <div class="nav-inner">
             <a href="#top" class="logo"><img src="images/logo-primary.svg" alt="Thumb Studio"></a>
             <div class="nav-links">
-                <a href="#services">Services</a>
+                <a href="#engagements">Engagements</a>
+                <a href="#frameworks">Frameworks</a>
                 <a href="#philosophy">Why the name</a>
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
@@ -421,12 +619,12 @@
     <section class="hero" id="top">
         <div class="hero-grid">
             <div class="hero-text">
-                <div class="label">Fractional leadership &amp; strategy</div>
-                <h1>We help founders build<br><span class="hand underlined">things that last.</span></h1>
-                <p>Thumb Studio is a strategy practice for startups. We join your team part-time, help you find product-market fit, and build the operating systems that let you scale with intention.</p>
+                <div class="label">Fractional innovation leadership</div>
+                <h1>A Chief Innovation Officer,<br><span class="hand underlined">when you need one.</span></h1>
+                <p>Thumb Studio is an innovation practice for founders and leadership teams. We find where your company is blind, choose the bets worth taking, and build the capability so you don&rsquo;t need us forever.</p>
                 <div class="hero-actions">
                     <a href="#contact" class="btn">Start a conversation</a>
-                    <a href="#services" class="link-mono">What we do &darr;</a>
+                    <a href="#engagements" class="link-mono">Three ways in &darr;</a>
                 </div>
             </div>
             <div class="panel">
@@ -460,26 +658,218 @@
         </div>
     </section>
 
-    <section class="section" id="services">
+    <section class="section" id="engagements">
         <div class="section-head">
             <div class="label">01 &mdash; What we do</div>
-            <h2>We do the work alongside you.</h2>
+            <h2>A day. Two weeks. <span class="hand">Or a seat at the table.</span></h2>
         </div>
-        <div class="service-grid">
-            <div class="service">
-                <div class="label">01</div>
-                <h3>Fractional Leadership</h3>
-                <p>An experienced operator on your team, part-time. Executive perspective on the decisions that matter, exactly when you need it, without the full-time hire.</p>
+        <p class="section-intro">Every engagement starts with the same two questions: where is your company blind, and which bet should it take. Start wherever the answer is least clear.</p>
+
+        <div class="ladder">
+            <article class="rung">
+                <div class="rung-head"><span class="label">01</span><span class="duration">One day</span></div>
+                <h3>The Workshop</h3>
+                <p class="hand rung-line">One room. One decision you&rsquo;ve been circling.</p>
+                <p>A full-day working session with your leadership or project team. Opens with Hear &middot; See &middot; Feel, then runs one of three tracks:</p>
+                <ul class="rung-list">
+                    <li><span class="key">A</span><span><strong>Governance</strong> &mdash; design your innovation operating model</span></li>
+                    <li><span class="key">B</span><span><strong>Kick-start</strong> &mdash; launch an internal innovation sprint</span></li>
+                    <li><span class="key">C</span><span><strong>Ideas</strong> &mdash; fill the pipeline with ranked, owned bets</span></li>
+                </ul>
+                <div class="rung-foot">
+                    <div class="label">You leave with</div>
+                    <p>A decision, owners, dates &mdash; and a written readout within five business days.</p>
+                </div>
+            </article>
+
+            <article class="rung">
+                <div class="rung-head"><span class="label">02</span><span class="duration">Two weeks</span></div>
+                <h3>The Sprint</h3>
+                <p class="hand rung-line">From a problem space to the places worth betting on.</p>
+                <p>Human-centered design research on one problem space &mdash; real customers, real interviews &mdash; accelerated by AI and guardrailed by people.</p>
+                <ul class="rung-list">
+                    <li><span class="key">W1</span><span><strong>Understand</strong> &mdash; frame, research, 8&ndash;12 interviews, themes</span></li>
+                    <li><span class="key">W2</span><span><strong>Define</strong> &mdash; synthesize, map, pressure-test, recommend</span></li>
+                    <li><span class="key">&rarr;</span><span>Ranked on <strong>Capability &middot; Urgency &middot; Durability</strong></span></li>
+                </ul>
+                <div class="rung-foot">
+                    <div class="label">You leave with</div>
+                    <p>3&ndash;5 opportunity spaces, a recommendation, the full research, and a 90-day next step.</p>
+                </div>
+            </article>
+
+            <article class="rung rung-dark">
+                <div class="rung-head"><span class="label">03</span><span class="duration">Ongoing</span></div>
+                <h3>Fractional CINO</h3>
+                <p class="hand rung-line">A Chief Innovation Officer, when you need one.</p>
+                <p>Senior innovation leadership on your executive team, part-time. Set the portfolio, stand up the ventures, run the cadence, hand over the playbook.</p>
+                <ul class="rung-list">
+                    <li><span class="key">&mdash;</span><span>Owns the innovation portfolio and its governance</span></li>
+                    <li><span class="key">&mdash;</span><span>Runs sprints and workshops as the operating rhythm</span></li>
+                    <li><span class="key">&mdash;</span><span>Builds the capability so you don&rsquo;t need us forever</span></li>
+                </ul>
+                <div class="rung-foot">
+                    <div class="label">Best for</div>
+                    <p>Leadership teams with more opportunity than bandwidth, and no one whose job it is to choose.</p>
+                </div>
+            </article>
+        </div>
+
+        <div class="ladder-foot">
+            <p>Not sure which door? Most teams start with a Workshop. It&rsquo;s the fastest way to find out whether a Sprint, a seat at the table, or nothing at all is the right next move.</p>
+            <a href="#contact" class="btn">Start a conversation</a>
+        </div>
+    </section>
+
+    <section class="section" id="frameworks">
+        <div class="section-head">
+            <div class="label">02 &mdash; How we think</div>
+            <h2>Two frameworks. <span class="hand">One tells you where to look. The other tells you what to pick.</span></h2>
+        </div>
+
+        <!-- Framework A: Hear · See · Feel -->
+        <div class="framework">
+            <div class="framework-head">
+                <div>
+                    <div class="label framework-kicker">Where to look &middot; Three questions for any leadership team</div>
+                    <h3 class="framework-title">Hear. See. Feel.</h3>
+                    <p class="hand framework-line">Most companies don&rsquo;t have a strategy problem. They have a senses problem.</p>
+                </div>
+                <div class="framework-intro">
+                    <p>Every company runs on three senses. When one goes quiet, decisions get made on stale or partial information &mdash; and it shows up as a strategy problem long before anyone names the real cause.</p>
+                    <p><strong>Ask the three questions. The one that&rsquo;s hardest to answer tells you where to start.</strong></p>
+                </div>
             </div>
-            <div class="service">
-                <div class="label">02</div>
-                <h3>Growth Strategy</h3>
-                <p>Sustainable scaling. We build the systems, processes, and culture that grow with the business instead of breaking under it.</p>
+
+            <div class="sense-grid">
+                <article class="sense">
+                    <div class="sense-top">
+                        <svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true"><circle cx="24" cy="30" r="3" fill="currentColor"/><path d="M15 30a9 9 0 0 1 18 0M9 30a15 15 0 0 1 30 0M3 30a21 21 0 0 1 42 0" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+                        <span class="label">01</span>
+                    </div>
+                    <h4>Hear</h4>
+                    <p class="sense-q">What do you hear from your clients?</p>
+                    <div class="label">When it&rsquo;s working</div>
+                    <p>Client feedback arrives unprompted, reaches the people who can act on it, and visibly changes something.</p>
+                    <div class="sense-band">
+                        <div class="label">If you aren&rsquo;t hearing</div>
+                        <p>You have a client communication and feedback problem.</p>
+                    </div>
+                </article>
+
+                <article class="sense">
+                    <div class="sense-top">
+                        <svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true"><path d="M4 24C10 14 16 10 24 10s14 4 20 14c-6 10-12 14-20 14S10 34 4 24Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><circle cx="24" cy="24" r="6.5" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="24" r="2.5" fill="currentColor"/></svg>
+                        <span class="label">02</span>
+                    </div>
+                    <h4>See</h4>
+                    <p class="sense-q">What do you see your competitors doing?</p>
+                    <div class="label">When it&rsquo;s working</div>
+                    <p>You know what competitors shipped, priced and hired for last quarter &mdash; and someone owns what it means for you.</p>
+                    <div class="sense-band">
+                        <div class="label">If you aren&rsquo;t seeing</div>
+                        <p>You have a business intelligence and monitoring problem.</p>
+                    </div>
+                </article>
+
+                <article class="sense">
+                    <div class="sense-top">
+                        <svg viewBox="0 0 80 100" width="36" height="44" aria-hidden="true"><path d="M6 98V40A34 34 0 0 1 74 40V98" fill="none" stroke="currentColor" stroke-width="3"/><path d="M18 98V41A22 22 0 0 1 62 41V74M62 86V98M30 98V80M30 68V42A10 10 0 0 1 50 42V98" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+                        <span class="label">03</span>
+                    </div>
+                    <h4>Feel</h4>
+                    <p class="sense-q">What do you feel you need to do to move the company forward?</p>
+                    <div class="label">When it&rsquo;s working</div>
+                    <p>Leadership shares a clear conviction about the next move &mdash; and protects the time on the calendar to keep forming it.</p>
+                    <div class="sense-band">
+                        <div class="label">If you aren&rsquo;t feeling</div>
+                        <p>You aren&rsquo;t giving yourselves the time and space to be strategic about the business.</p>
+                    </div>
+                </article>
             </div>
-            <div class="service">
-                <div class="label">03</div>
-                <h3>Product-Market Fit</h3>
-                <p>Structured experiments and deep customer insight. We help you navigate pivots and find the fit that makes everything else easier.</p>
+
+            <div class="framework-foot">
+                <div>
+                    <div class="label">How we use it</div>
+                    <p>Hear &middot; See &middot; Feel is the first hour of every Thumb Studio engagement. Which sense is failing decides what we build.</p>
+                </div>
+                <div class="framework-map label">Hear &rarr; listening loops &nbsp;&middot;&nbsp; See &rarr; intelligence systems &nbsp;&middot;&nbsp; Feel &rarr; strategic cadence</div>
+            </div>
+        </div>
+
+        <!-- Bridge -->
+        <div class="bridge">
+            <span class="label">Then</span>
+            <p class="hand">One tells you where to look. The other tells you what to pick.</p>
+        </div>
+
+        <!-- Framework B: Capability · Urgency · Durability -->
+        <div class="framework">
+            <div class="framework-head">
+                <div>
+                    <div class="label framework-kicker">What to pick &middot; Three lenses for choosing a bet</div>
+                    <h3 class="framework-title">Capability. Urgency. Durability.</h3>
+                    <p class="hand framework-line">Can we. Must they. Should we.</p>
+                </div>
+                <div class="framework-intro">
+                    <p>Hear &middot; See &middot; Feel tells you where your company is blind. This one tells you which bet to take once you can see. Every opportunity space gets three scores from 1 to 5.</p>
+                    <p><strong>A weak answer on any one lens is the answer &mdash; however strong the other two.</strong></p>
+                </div>
+            </div>
+
+            <div class="sense-grid">
+                <article class="sense">
+                    <div class="sense-top">
+                        <svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true"><rect x="6" y="26" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><rect x="26" y="26" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><rect x="16" y="6" width="16" height="16" fill="currentColor"/></svg>
+                        <span class="label">01</span>
+                    </div>
+                    <h4>Capability</h4>
+                    <p class="sense-q">Can we do this &mdash; or is it an adjacency worth building?</p>
+                    <p>The feasibility question, asked like an operator. Low capability isn&rsquo;t a no if it&rsquo;s a capability you want to own.</p>
+                    <ol class="scale">
+                        <li class="scale-top"><span class="key">5</span><span>We have it in-house today.</span></li>
+                        <li><span class="key">3</span><span>Adjacent &mdash; buildable or buyable within a year, and worth having.</span></li>
+                        <li><span class="key">1</span><span>Someone else&rsquo;s business.</span></li>
+                    </ol>
+                </article>
+
+                <article class="sense">
+                    <div class="sense-top">
+                        <svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true"><path d="M3 26h9l5-14 8 28 6-18 3 4h11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <span class="label">02</span>
+                    </div>
+                    <h4>Urgency</h4>
+                    <p class="sense-q">Is this a painkiller or a vitamin &mdash; and for how many?</p>
+                    <p>The desirability question, with teeth. Depth of pain first, then breadth. A painkiller for six people is a feature, not a bet.</p>
+                    <ol class="scale">
+                        <li class="scale-top"><span class="key">5</span><span>Painkiller. They already pay for, or hack around, the problem.</span></li>
+                        <li><span class="key">3</span><span>A known irritation. Nobody has budget for it yet.</span></li>
+                        <li><span class="key">1</span><span>Vitamin. Nice to have; nobody is asking.</span></li>
+                    </ol>
+                </article>
+
+                <article class="sense">
+                    <div class="sense-top">
+                        <svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true"><circle cx="24" cy="24" r="20" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="24" r="13" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="24" r="6" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="24" r="1.5" fill="currentColor"/></svg>
+                        <span class="label">03</span>
+                    </div>
+                    <h4>Durability</h4>
+                    <p class="sense-q">Should we &mdash; does it fit our business now, and still matter in five years?</p>
+                    <p>The viability question, pointed forward. Fit with where the business is going, and whether it grows with you or burns out.</p>
+                    <ol class="scale">
+                        <li class="scale-top"><span class="key">5</span><span>Grows with us. Matters more in five years.</span></li>
+                        <li><span class="key">3</span><span>Makes sense now. Unclear whether it compounds or plateaus.</span></li>
+                        <li><span class="key">1</span><span>A one-off, a trend, or a detour.</span></li>
+                    </ol>
+                </article>
+            </div>
+
+            <div class="framework-foot framework-foot-dark">
+                <div>
+                    <div class="label">How to score</div>
+                    <p>Scores don&rsquo;t add. A 5 &middot; 5 &middot; 1 is a dead idea, not an 11 out of 15. <span class="hand">Rank by the lowest score, and argue about the floor.</span></p>
+                </div>
+                <div class="framework-map label">Used to rank the opportunity spaces at the end of every Sprint, and to converge in every Workshop. Adapted from the desirability &middot; feasibility &middot; viability lens popularized by IDEO.</div>
             </div>
         </div>
     </section>
@@ -487,7 +877,7 @@
     <section class="philosophy" id="philosophy">
         <div class="inner">
             <div>
-                <div class="label">02 &mdash; Why the name</div>
+                <div class="label">03 &mdash; Why the name</div>
                 <h2>The thumb is what makes us <span class="hand underlined">human.</span></h2>
                 <p>It&rsquo;s what allows us to grip tools, to create, to build.</p>
                 <p>Every startup&rsquo;s journey is unique. We don&rsquo;t believe in one-size-fits-all playbooks or growth-at-all-costs mentalities. We work alongside founders to understand your specific context, then help you build something that lasts.</p>
@@ -521,12 +911,12 @@
     <section class="about" id="about">
         <div class="inner">
             <div>
-                <div class="label">03 &mdash; About</div>
+                <div class="label">04 &mdash; About</div>
                 <h2>Human-centered strategy, rigorously applied.</h2>
             </div>
             <div>
                 <p>Thumb Studio was founded on the belief that the best businesses are built by deeply understanding people: customers, teams, and stakeholders alike.</p>
-                <p>With roots in human-centered design from IDEO and Doblin, and strategic foundations from Yale School of Management, we bring a specific perspective to startup consulting: rigorous strategy meets creative problem-solving.</p>
+                <p>With roots in human-centered design from IDEO and Doblin, and strategic foundations from Yale School of Management, we bring a specific perspective to innovation consulting: rigorous strategy meets creative problem-solving.</p>
                 <div class="byline">
                     <strong>Yousef Aly</strong>
                     <div class="label">Founder</div>
@@ -538,7 +928,7 @@
     <section class="contact" id="contact">
         <div class="inner">
             <div>
-                <div class="label">04 &mdash; Get in touch</div>
+                <div class="label">05 &mdash; Get in touch</div>
                 <h2>Ready to build something?</h2>
                 <p>Tell us where you are and what&rsquo;s in the way. We&rsquo;ll tell you honestly whether we can help.</p>
             </div>
